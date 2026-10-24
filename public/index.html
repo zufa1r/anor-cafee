@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anor Kafe menyusi va narxlar | Toshkent</title>
+<meta name="description" content="Anor Kafe menyusi: qahva, choy, nonushta, osh, lag'mon, manti va shirinliklar. Narxlar so'mda. Toshkent, Yunusobod.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anor Kafe menyusi va narxlar">
+<meta property="og:description" content="Qahva, choy, nonushta, asosiy taomlar va shirinliklar. Toshkent, Yunusobod.">
+<meta property="og:locale" content="uz_UZ">
+<!--LD-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@600;700&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app" id="app">
+  <header class="top">
+    <div class="brand">Anor <span>Kafe</span></div>
+    <div class="tablabel" id="tableLabel" hidden></div>
+  </header>
+
+  <section id="view-menu">
+    <div class="lead">
+      <p class="eyebrow">Qahva · Choy · Oshxona</p>
+      <h1>Anor Kafe menyusi</h1>
+      <p>Har kuni 08:00 dan 23:00 gacha. Yunusobod tumani, Toshkent. Narxlar so'mda, xizmat haqi narxga kiritilgan.</p>
+    </div>
+    <div class="banner" id="banner"></div>
+    <div class="tabsbar"><div class="tabs" id="tabs"><!--TABS--></div></div>
+    <div id="menu"><!--MENU--></div>
+  </section>
+
+  <section id="view-done" hidden>
+    <div class="done" id="doneBox"></div>
+  </section>
+</div>
+
+<div class="cartbar" id="cartbar" hidden>
+  <div class="inner">
+    <button class="big" type="button" id="openSheet"><span id="cartCount"></span><span class="sum" id="cartSum"></span></button>
+  </div>
+</div>
+
+<div class="sheet" id="sheet" hidden role="dialog" aria-label="Buyurtmangiz">
+  <div class="inner">
+    <h2>Buyurtmangiz</h2>
+    <p class="eyebrow" id="sheetTable"></p>
+    <ul class="lines" id="lines"></ul>
+    <div class="total"><span>Jami</span><span id="sheetTotal"></span></div>
+    <label class="f" for="note">Izoh (ixtiyoriy)
+      <textarea id="note" maxlength="200" placeholder="Masalan: qahva shakarsiz"></textarea>
+    </label>
+    <p class="err" id="sendErr" hidden></p>
+    <button class="big" type="button" id="send"><span>Buyurtma berish</span></button>
+    <button class="ghost" type="button" id="closeSheet">Menyuga qaytish</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden role="status"></div>
+<script src="/app.js"></script>
+</body>
+</html>

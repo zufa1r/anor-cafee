@@ -1,0 +1,16 @@
+{
+  "name": "anor-kafe-buyurtma",
+  "version": "1.0.0",
+  "description": "Anor Kafe: ochiq menyu sayti, QR orqali buyurtma va parolli oshxona/bar paneli",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "qrcode": "^1.5.4"
+  }
+}

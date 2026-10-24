@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Anor Kafe xodimlar paneli</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@600;700&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app wide" id="app">
+  <header class="top">
+    <div class="brand">Anor <span>Kafe</span></div>
+    <button class="ghost" type="button" id="logout" hidden>Chiqish</button>
+  </header>
+
+  <form class="login" id="login" hidden>
+    <h1>Xodimlar kirishi</h1>
+    <label class="f" for="pw">Parol
+      <input id="pw" type="password" autocomplete="current-password" required>
+    </label>
+    <p class="err" id="loginErr" hidden></p>
+    <button class="big" type="submit"><span>Kirish</span></button>
+  </form>
+
+  <section id="board" hidden>
+    <div class="stafftop">
+      <h1>Buyurtmalar</h1>
+      <button class="fchip" type="button" data-filter="all" aria-pressed="true">Hammasi</button>
+      <button class="fchip" type="button" data-filter="oshxona" aria-pressed="false">Oshxona</button>
+      <button class="fchip" type="button" data-filter="bar" aria-pressed="false">Bar</button>
+    </div>
+    <div class="tools">
+      <button class="ghost" type="button" id="soundBtn">Ovoz: o'chiq</button>
+      <a class="ghost" href="/admin/qr">Stol QR-kodlari</a>
+      <span class="eyebrow" id="count" aria-live="polite"></span>
+    </div>
+    <div class="cards" id="cards"></div>
+    <p class="empty" id="empty" hidden>Hozircha faol buyurtma yo'q. Mijoz QR-kodni skanerlab buyurtma bersa, shu yerda darrov paydo bo'ladi.</p>
+  </section>
+</div>
+
+<div class="receipt" id="receipt"></div>
+<div class="toast" id="toast" hidden role="status"></div>
+<script src="/admin.js"></script>
+</body>
+</html>
